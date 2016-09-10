@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Platform,
   Text,
+  TouchableOpacity,
   View,
   Image,
 } from 'react-native';
@@ -12,26 +13,22 @@ import {
 const PROFILE_WIDTH = 90;
 
 class EventExample extends React.Component {
-  static title = 'Native Animated.Event';
-  static description = '';
   state = {
     scrollY: new Animated.Value(0),
   };
 
-  componentDidMount() {
-    setInterval(() => {
-      const start = Date.now();
-      setTimeout(() => {
-        while (Date.now() - start < 2500) {}
-      }, 1);
-    }, 5000);
+  _blockJS = () => {
+    const start = Date.now();
+    setTimeout(() => {
+      while (Date.now() - start < 5000) {}
+    }, 1);
   }
 
   _renderContent() {
     return Array.from({ length: 30 }).map((_, i) =>
-      <View key={i} style={styles.row}>
+      <TouchableOpacity key={i} style={styles.row} onPress={this._blockJS}>
         <Text>{i}</Text>
-      </View>
+      </TouchableOpacity>
     );
   }
 
