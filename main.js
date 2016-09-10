@@ -55,8 +55,8 @@ class EventExample extends React.Component {
       outputRange: [0, 0, 1],
     });
     const profileTranslateY = this.state.scrollY.interpolate({
-      inputRange: [-1, 0, 100],
-      outputRange: [1, 0, -80],
+      inputRange: [0, 1],
+      outputRange: [0, -1],
     });
     const profileTranslateX = this.state.scrollY.interpolate({
       inputRange: [-1, 0, 150, 151],
