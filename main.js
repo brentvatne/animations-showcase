@@ -21,10 +21,12 @@ import {
 } from 'react-native-elements'
 
 import ProfileScreen from './ProfileScreen';
+import PodcastScreen from './PodcastScreen';
 
 const Router = createRouter(() => ({
   home: () => HomeScreen,
   profile: () => ProfileScreen,
+  podcast: () => PodcastScreen,
 }));
 
 class App extends React.Component {
@@ -52,10 +54,21 @@ class HomeScreen extends React.Component {
           contentContainerStyle={styles.contentContainer}>
           <List containerStyle={{marginTop: 0}}>
             <ListItem
-              key="twitter"
+              key="profile"
               title="Twitter-style profile screen"
               icon={{name: "person"}}
-              onPress={this._handlePressTwitterProfile}
+              onPress={() => {
+                this.props.navigator.push(Router.getRoute('profile'));
+              }}
+            />
+
+            <ListItem
+              key="podcast"
+              title="Casts-style podcast info screen"
+              icon={{name: "mic"}}
+              onPress={() => {
+                this.props.navigator.push(Router.getRoute('podcast'));
+              }}
             />
           </List>
 
@@ -66,7 +79,6 @@ class HomeScreen extends React.Component {
   }
 
   _handlePressTwitterProfile = () => {
-    this.props.navigator.push(Router.getRoute('profile'));
   }
 }
 

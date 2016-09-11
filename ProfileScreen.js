@@ -101,7 +101,7 @@ export default class Profile extends React.Component {
             {this._renderContent()}
           </Animated.ScrollView>
 
-          <Animated.View style={[styles.header, { transform: [{ translateY: headerTranslate }] }]}>
+          <Animated.View style={[styles.header, { transform: [{ translateY: headerTranslate }] }]} pointerEvents="none">
             <Animated.Image
               style={[styles.image, { opacity: imageOpacity, transform: [{ translateY: imageTranslate }, { scale: imageScale } ] }]}
               resizeMode="cover"
@@ -122,18 +122,23 @@ export default class Profile extends React.Component {
 
           <View style={styles.navbar}>
             <Animated.View style={[styles.navbarBackground, { opacity: navBarBackgroundOpacity }]} />
-            <Image
-              style={styles.backButton}
-              source={{ uri: 'https://www.android.com/static/img/map/back-arrow.png' }}
-            />
 
-            <Animated.View style={[styles.titleContainer, {opacity: titleOpacity, transform: [{ translateY: titleTranslate }] }]}>
-              <Text style={styles.title}>
-                Doogy
-              </Text>
-            </Animated.View>
+            <View style={[StyleSheet.absoluteFill, {flexDirection: 'row', alignItems: 'center'}]}>
+              <TouchableOpacity onPress={() => { this.props.navigator.pop() }} hitSlop={{top: 15, left: 15, bottom: 15, right: 15}}>
+                <Image
+                  style={styles.backButton}
+                  source={{ uri: 'https://www.android.com/static/img/map/back-arrow.png' }}
+                />
+              </TouchableOpacity>
 
-            <View style={styles.rightButton} />
+              <Animated.View pointerEvents="none" style={[styles.titleContainer, {opacity: titleOpacity, transform: [{ translateY: titleTranslate }] }]}>
+                <Text style={styles.title}>
+                  Doogy
+                </Text>
+              </Animated.View>
+
+              <View style={styles.rightButton} />
+            </View>
           </View>
         </View>
 
