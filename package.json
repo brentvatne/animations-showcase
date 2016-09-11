@@ -1,13 +1,17 @@
 {
-  "name": "fancy-scroll-effects",
+  "name": "animation-showcase",
   "version": "0.0.0",
-  "description": "Hello Exponent!",
-  "author": "exponent.team@gmail.com",
+  "description": "",
+  "author": "brent@exp.host",
   "private": true,
   "main": "main.js",
   "dependencies": {
+    "@exponent/ex-navigation": "^1.5.18",
+    "@exponent/vector-icons": "^1.0.4",
     "exponent": "10.0.0-rc1",
     "react": "~15.3.1",
-    "react-native": "github:exponentjs/react-native#sdk-10"
+    "react-native": "github:exponentjs/react-native#sdk-10",
+    "react-native-elements": "github:exponentjs/react-native-elements",
+    "react-native-vector-icons": "github:exponentjs/react-native-vector-icons"
   }
 }

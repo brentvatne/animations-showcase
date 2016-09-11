@@ -1,4 +1,4 @@
-# Scroll effects you can do with Animated.event native driver
+# Animations Showcase
 
 So far only the one, like a Twitter profile. Implemented by
 @janicduplessis and modified by myself @brentvatne.

@@ -1,7 +1,7 @@
 {
-  "name": "fancy-scroll-effects",
-  "description": "Offload Animated.event to native",
-  "slug": "fancy-scroll-effects",
+  "name": "Animations Showcase",
+  "description": "See some of the animations and interactions that you can easily implement with React Native / Exponent",
+  "slug": "animations-showcase",
   "sdkVersion": "UNVERSIONED",
   "version": "1.0.0",
   "orientation": "portrait",
