@@ -62,9 +62,47 @@ class HomeScreen extends React.Component {
               }}
             />
 
+            { /* Placeholders below this point */ }
+
+            <ListItem
+              key="casts"
+              title="Casts-style podcast info screen"
+              icon={{name: "mic"}}
+              onPress={() => {
+                this.props.navigator.push(Router.getRoute('podcast'));
+              }}
+            />
+
             <ListItem
               key="podcast"
-              title="Casts-style podcast info screen"
+              title="Podcasts-app-style podcast info screen"
+              icon={{name: "mic"}}
+              onPress={() => {
+                this.props.navigator.push(Router.getRoute('podcast'));
+              }}
+            />
+
+            <ListItem
+              key="instant-article"
+              title="Facebook Instant Article"
+              icon={{name: "mic"}}
+              onPress={() => {
+                this.props.navigator.push(Router.getRoute('podcast'));
+              }}
+            />
+
+            <ListItem
+              key="shared-element-transitions"
+              title="Airbnb-style Shared Element Transitions"
+              icon={{name: "mic"}}
+              onPress={() => {
+                this.props.navigator.push(Router.getRoute('podcast'));
+              }}
+            />
+
+            <ListItem
+              key="image-gallery"
+              title="A classic Image Gallery"
               icon={{name: "mic"}}
               onPress={() => {
                 this.props.navigator.push(Router.getRoute('podcast'));

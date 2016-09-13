@@ -2,7 +2,7 @@
   "name": "Animations Showcase",
   "description": "See some of the animations and interactions that you can easily implement with React Native / Exponent",
   "slug": "animations-showcase",
-  "sdkVersion": "UNVERSIONED",
+  "sdkVersion": "10.0.0",
   "version": "1.0.0",
   "orientation": "portrait",
   "primaryColor": "#cccccc",
