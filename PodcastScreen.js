@@ -9,7 +9,8 @@ export default class PodcastScreen extends React.Component {
 
   static route = {
     navigationBar: {
-      visible: false,
+      visible: true,
+      title: 'Podcast',
     },
   };
 

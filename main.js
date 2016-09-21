@@ -22,11 +22,13 @@ import {
 
 import ProfileScreen from './ProfileScreen';
 import PodcastScreen from './PodcastScreen';
+import MomentsScreen from './MomentsScreen';
 
 const Router = createRouter(() => ({
   home: () => HomeScreen,
   profile: () => ProfileScreen,
   podcast: () => PodcastScreen,
+  moments: () => MomentsScreen,
 }));
 
 class App extends React.Component {
@@ -57,56 +59,14 @@ class HomeScreen extends React.Component {
               key="profile"
               title="Twitter-style profile screen"
               icon={{name: "person"}}
-              onPress={() => {
-                this.props.navigator.push(Router.getRoute('profile'));
-              }}
-            />
-
-            { /* Placeholders below this point */ }
-
-            <ListItem
-              key="casts"
-              title="Casts-style podcast info screen"
-              icon={{name: "mic"}}
-              onPress={() => {
-                this.props.navigator.push(Router.getRoute('podcast'));
-              }}
+              onPress={() => this.props.navigator.push('profile') }
             />
 
             <ListItem
-              key="podcast"
-              title="Podcasts-app-style podcast info screen"
-              icon={{name: "mic"}}
-              onPress={() => {
-                this.props.navigator.push(Router.getRoute('podcast'));
-              }}
-            />
-
-            <ListItem
-              key="instant-article"
-              title="Facebook Instant Article"
-              icon={{name: "mic"}}
-              onPress={() => {
-                this.props.navigator.push(Router.getRoute('podcast'));
-              }}
-            />
-
-            <ListItem
-              key="shared-element-transitions"
-              title="Airbnb-style Shared Element Transitions"
-              icon={{name: "mic"}}
-              onPress={() => {
-                this.props.navigator.push(Router.getRoute('podcast'));
-              }}
-            />
-
-            <ListItem
-              key="image-gallery"
-              title="A classic Image Gallery"
-              icon={{name: "mic"}}
-              onPress={() => {
-                this.props.navigator.push(Router.getRoute('podcast'));
-              }}
+              key="moments"
+              title={`Twitter-style "Moments" scrolling`}
+              icon={{name: "border-outer"}}
+              onPress={() => this.props.navigator.push('moments') }
             />
           </List>
 

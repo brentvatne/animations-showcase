@@ -6,7 +6,7 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "@exponent/ex-navigation": "^1.5.25",
+    "@exponent/ex-navigation": "^1.5.29",
     "@exponent/vector-icons": "^1.0.4",
     "exponent": "10.0.0",
     "react": "~15.3.1",
